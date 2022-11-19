@@ -10,7 +10,8 @@ API.interceptors.request.use((req)=>{
 })
 
 export const postlarGetir=()=>axios.get("/post");
-
+export const postGetir=(id)=>axios.get("/post",{params:id});
+export const postOnerilenGetir=(tag)=>axios.get("/post",{params:tag});
 export const postOlustur=(newPost)=>API.post(url,newPost);
 export const postGuncelle=(id,updatedPost)=>API.patch(`${url}/${id}`,updatedPost)
 export const postSil=(id)=>API.delete(`${url}/${id}`)
